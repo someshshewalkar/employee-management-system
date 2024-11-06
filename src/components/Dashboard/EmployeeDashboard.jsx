@@ -5,13 +5,13 @@ import TaskLisst from '../TaskList/TaskLisst'
 
 
 
-const EmployeeDashboard = ({data}) => {
-  // console.log(data)
+const EmployeeDashboard = (props) => {
+  // console.log( "this is data ",data)
   return (
     <div className='p-10 bg-[#1C1C1C] h-screen  '>
-        <Header data={data}/>
-        <TaskNumber data={data}/>
-        <TaskLisst/>
+        <Header  changeUser= {props.changeUser} data={props.data}/>
+        <TaskNumber data={props.data}/>
+        <TaskLisst data={props.data}/>
         
       
         
